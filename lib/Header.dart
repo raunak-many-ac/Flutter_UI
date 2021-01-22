@@ -8,9 +8,8 @@ class Header extends StatefulWidget {
 class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Container(
+    return
+     Container(
         height: MediaQuery.of(context).size.height/13,
         // color: Colors.amber,
         child: Column(
@@ -32,7 +31,7 @@ class _HeaderState extends State<Header> {
             )
           ],
         ),
-      ),
+
     );
   }
 }
