@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:myproject/Stats_And_Plans.dart';
+import 'package:myproject/DataPlans.dart';
+import 'package:myproject/RecommendedPlans.dart';
 import "package:myproject/bottom_bar.dart";
 import "package:myproject/Header.dart";
 
@@ -53,16 +54,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 20.0),
-        child: Column(
+      body:  Column(
           children: [
             Header(),
-            Stats_And_Plans(),
+            DataPlans(),
 
           ],
         ),
-      ),
+
       bottomNavigationBar: BottomBar(),
       );// This trailing comma makes auto-formatting nicer for build methods.
   }
