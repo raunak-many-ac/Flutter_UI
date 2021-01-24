@@ -12,19 +12,19 @@ class _RecommendedPlansState extends State<RecommendedPlans> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 8.0, right: 10, top: 10),
+          padding: const EdgeInsets.only(left: 24.0, right: 20, top: 30),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "Recommended",
                 textAlign: TextAlign.start,
-                style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Text(
                 "View all",
                 textAlign: TextAlign.start,
-                style: TextStyle(color: Colors.blue, fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(color: Color.fromRGBO(80,86,255, 1), fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ],
           ),

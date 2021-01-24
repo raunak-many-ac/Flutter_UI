@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myproject/Carousal.dart';
-import 'package:myproject/RecommendedPlans.dart';
+import 'package:myproject/DataPlans/Carousal.dart';
+import 'package:myproject/DataPlans/RecommendedPlans.dart';
+
 
 class DataPlans extends StatefulWidget {
   @override
