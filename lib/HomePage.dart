@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:myproject/DataPlans/DataPlans.dart';
 import 'package:myproject/Header.dart';
+import 'package:myproject/Promos/Promos.dart';
 import 'package:myproject/bottom_bar.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -33,12 +34,17 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body:  Column(
-          children: [
-            Header(),
-            DataPlans(),
-          ],
-        ),
+      body:  SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        physics: BouncingScrollPhysics(),
+        child: Column(
+            children: [
+              Header(),
+              DataPlans(),
+              Promos()
+            ],
+          ),
+      ),
 
       bottomNavigationBar: BottomBar(),
       );// This trailing comma makes auto-formatting nicer for build methods.

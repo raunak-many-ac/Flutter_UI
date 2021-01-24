@@ -13,7 +13,7 @@ class _DataPlansState extends State<DataPlans> {
   Widget build(BuildContext context) {
     return Container(
       color: Color.fromRGBO(241,244,255, 1),
-      height: MediaQuery.of(context).size.height/1.9,
+      height: MediaQuery.of(context).size.height/1.95,
       child: Column(
         children: [
           Carousal(),
