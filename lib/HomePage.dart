@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:myproject/Auth/AuthScreen.dart';
 import 'package:myproject/DataPlans/DataPlans.dart';
 import 'package:myproject/Header.dart';
 import 'package:myproject/Promos/Promos.dart';
 import 'package:myproject/bottom_bar.dart';
+import "package:myproject/Auth/google_signin.dart";
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -26,11 +28,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
         actions: [
           Icon(Icons.notifications_on_outlined, size: 30.0, color: Colors.black),
-          Container(
-              height: 30.0,
-              width: 30.0,
-              margin: EdgeInsets.only(right: 15, left: 10),
-              child: SvgPicture.asset("assets/profile.svg")
+          InkWell(
+            onTap: () => logOut(context),
+            child: Container(
+                height: 30.0,
+                width: 30.0,
+                margin: EdgeInsets.only(right: 15, left: 10),
+                child: SvgPicture.asset("assets/profile.svg"),
+
+            ),
           ),
         ],
       ),
@@ -48,5 +54,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
       bottomNavigationBar: BottomBar(),
       );// This trailing comma makes auto-formatting nicer for build methods.
+  }
+
+  void logOut(BuildContext context) async{
+    print("logout....");
+    await signOutUser();
+    print("logged out");
+    Navigator.pop(context);
+    Navigator.push(context, MaterialPageRoute(builder: (context) => AuthScreen()));
   }
 }
