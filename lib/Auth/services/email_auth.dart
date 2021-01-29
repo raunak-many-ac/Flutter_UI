@@ -7,7 +7,7 @@ Future<User> signin(
     String email, String password, BuildContext context) async {
   try {
     UserCredential result =
-    await auth.signInWithEmailAndPassword(email: email, password: email);
+    await auth.signInWithEmailAndPassword(email: email, password: password);
     User user = result.user;
     // return Future.value(true);
     return Future.value(user);
@@ -16,16 +16,16 @@ Future<User> signin(
     print(e.code);
     switch (e.code) {
       case "invalid-email":
-        showErrDialog(context, e.code);
+        showErrDialog(context, "Invalid Email");
         break;
       case "wrong-password":
-        showErrDialog(context, e.code);
+        showErrDialog(context, "Invalid Password");
         break;
       case 'user-not-found':
-        showErrDialog(context, e.code);
+        showErrDialog(context, "No such user exists");
         break;
       case "user-disabled":
-        showErrDialog(context, e.code);
+        showErrDialog(context, "User is now disabled");
         break;
       default:
         showErrDialog(context, "Something went wrong");
@@ -46,13 +46,13 @@ Future<User> signUp(
     // return Future.value(true);
   } catch (error) {
     switch (error.code) {
-      case 'ERROR_EMAIL_ALREADY_IN_USE':
+      case "email-already-in-use":
         showErrDialog(context, "Email Already Exists");
         break;
-      case 'ERROR_INVALID_EMAIL':
+      case "invalid-email":
         showErrDialog(context, "Invalid Email Address");
         break;
-      case 'ERROR_WEAK_PASSWORD':
+      case "weak-password":
         showErrDialog(context, "Please Choose a stronger password");
         break;
     }

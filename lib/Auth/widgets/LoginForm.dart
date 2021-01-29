@@ -76,7 +76,7 @@ Widget LoginForm(
 
 void startLogin(String email, String password,
     Function goToHomeScreen, BuildContext context) async {
-  print("email = " + email);
+  print("email = " + email+" password = "+password);
 
   if (await signin(email, password, context) != null) goToHomeScreen(context);
 }

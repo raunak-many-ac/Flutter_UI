@@ -88,7 +88,12 @@ Widget SignUpForm(
 void startSignUp(String email, String password, String confirmPassword,
     Function goToHomeScreen, BuildContext context) async {
 
-  print("email = "+email);
+  print("email = "+email+" password "+password+" confirmpassword = "+confirmPassword);
+  if(!passwordVerified(password, confirmPassword)) {
+    print("passwords don't match ");
+    showErrDialog(context, "passwords don't match");
+    return;
+  }
 
   if(await signUp(email, password, context) != null)
     goToHomeScreen(context);
