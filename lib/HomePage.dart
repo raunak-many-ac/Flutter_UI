@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:myproject/Auth/AuthScreen.dart';
+import 'file:///C:/Users/admin/Flutter_projects/myproject/lib/Auth/widgets/AuthScreen.dart';
 import 'package:myproject/DataPlans/DataPlans.dart';
 import 'package:myproject/Header.dart';
 import 'package:myproject/Promos/Promos.dart';
 import 'package:myproject/bottom_bar.dart';
-import "package:myproject/Auth/google_signin.dart";
+import 'file:///C:/Users/admin/Flutter_projects/myproject/lib/Auth/services/google_signin.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);

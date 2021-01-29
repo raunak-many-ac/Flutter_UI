@@ -1,9 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:myproject/Auth/SignUpForm.dart';
-import 'package:myproject/Auth/LoginForm.dart';
-import 'package:myproject/Auth/google_signin.dart';
+import 'file:///C:/Users/admin/Flutter_projects/myproject/lib/Auth/widgets/SignUpForm.dart';
+import 'file:///C:/Users/admin/Flutter_projects/myproject/lib/Auth/widgets/LoginForm.dart';
+import 'file:///C:/Users/admin/Flutter_projects/myproject/lib/Auth/services/google_signin.dart';
 import 'package:myproject/HomePage.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -33,7 +31,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           fontWeight: FontWeight.w500,
                           fontSize: 30),
                     )),
-                _signUp ? SignUpForm(setSignUp) : LoginForm(setSignUp),
+                _signUp ? SignUpForm(setSignUp, goToHomeScreen, context) : LoginForm(setSignUp, goToHomeScreen, context),
                 Center(
                   child: RaisedButton(
                     elevation: 20,
