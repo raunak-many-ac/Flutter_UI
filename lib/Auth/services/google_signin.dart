@@ -62,5 +62,6 @@ Future<bool> signOutUser() async {
     await gooleSignIn.disconnect();
   }
   await auth.signOut();
+
   return Future.value(true);
 }
